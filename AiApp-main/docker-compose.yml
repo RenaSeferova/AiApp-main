@@ -1,0 +1,16 @@
+services:
+  postgres:
+    image: postgres:15
+    container_name: my-postgres
+    environment:
+      POSTGRES_USER: aiperson
+      POSTGRES_PASSWORD: rena1234
+      POSTGRES_DB: aipersonlog
+    ports:
+      - "5433:5432"
+    volumes:
+      - data:/var/lib/postgresql/data
+    restart: always
+
+volumes:
+  data:
